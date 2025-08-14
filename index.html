@@ -1,34 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Barras Nav</title>
 </head>
 <style>
+    .barra1 {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        background-color: black;
+        color: white;
+        margin-bottom: 200px;
+    }
 
+    .logo {
+        display: flex;
+    }
+
+    .nav-links {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+
+    }
+
+    .contact {
+        display: flex;
+        background-color: blue;
+    }
+
+    .barra2 {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        background-color: black;
+        color: white;
+        margin-bottom: 200px;
+    }
+
+    .logo2 {
+        display: flex;
+    }
+
+    .nav-links2 {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+
+
+
+    .barra3 {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        background-color: black;
+        color: white;
+        margin-bottom: 200px;
+    }
+
+    .logo3 {
+        display: flex;
+    }
+
+    .nav-links3 {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
 </style>
+
 <body>
     <div class="barra1">
-        <h1>logobakery</h1>
-        <h1>service</h1>
-        <h1>projects</h1>
-        <h1>about</h1>
-        <h1>contact</h1>
+        <div class="logo">
+            <h1>logobakery</h1>
+        </div>
+        <div class="nav-links">
+            <h1>service</h1>
+            <h1>projects</h1>
+            <h1>about</h1>
+        </div>
+        <div class="contact">
+            <h1>contact</h1>
+        </div>
+
     </div>
-        <div class="barra2">
-        <h1>logobakery</h1>
-        <h1>service</h1>
-        <h1>projects</h1>
-        <h1>about</h1>
-        <h1>contact</h1>
+    <div class="barra2">
+        <div class="logo2">
+            <h1>logobakery</h1>
+        </div>
+        <div class="nav-links2">
+            <h1>service</h1>
+            <h1>projects</h1>
+            <h1>about</h1>
+            <div class="contact">
+                <h1>contact</h1>
+            </div>
+        </div>
     </div>
-        <div class="barra3">
-        <h1>logobakery</h1>
-        <h1>service</h1>
-        <h1>projects</h1>
-        <h1>about</h1>
-        <h1>contact</h1>
+    <div class="barra3">
+        <div class="logo3">
+            <h1>logobakery</h1>
+        </div>
+        <div class="nav-links3">
+            <h1>service</h1>
+            <h1>projects</h1>
+            <h1>about</h1>
+            <div class="contact">
+                <h1>contact</h1>
+            </div>
+        </div>
     </div>
 </body>
+
 </html>
