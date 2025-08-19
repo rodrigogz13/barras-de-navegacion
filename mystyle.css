@@ -1,3 +1,6 @@
+
+/* CSS Externo */
+
 body {
     background-color: lightblue;
 }
@@ -5,4 +8,22 @@ body {
 #h1{
     color: navy;
     margin-left: 20px;
+}
+
+#h2{
+    text-align: center;
+}
+
+.seccion1 p{
+    background-color: red;
+    width: 100%;
+    text-align: center;
+}
+.seccion2 p{
+    background-color: blue;
+    
+}
+
+p{
+    font-size: 30px;
 }
