@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barras Nav</title>
+    <style>
+        .barra1 {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            background-color: black;
+            color: white;
+            margin-bottom: 200px;
+            font-family: Arial, sans-serif;
+        }
+
+        .logo {
+            display: flex;
+            font-size: small;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            font-size: small;
+        }
+
+        .menu-window {
+            display: flex;
+            align-items: center;
+            font-size: small;
+        }
+
+        .contact {
+            display: flex;
+            background-color: blue;
+            font-size: small;
+        }
+
+        .show-desktop {
+            display: block;
+        }
+
+        .show-mobile {
+            display: none;
+            cursor: pointer;
+        }
+
+        .h1 {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+
+        /* responsive */
+        @media (max-width:900px) {
+            .barra1 {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .menu-window {
+                display: none; /* oculta el menú */
+                flex-direction: column;
+                gap: 10px;
+                margin-top: 10px;
+            }
+
+            .menu-window.visible-over {
+                display: flex; /* lo muestra al activar */
+            }
+
+            .show-desktop {
+                display: none;
+            }
+
+            .show-mobile {
+                display: block;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="barra1">
+        <!-- Botón abrir -->
+        <div class="pop-up show-mobile">
+            <h1 class="abrir">...</h1>
+        </div>
+        <!-- Botón cerrar -->
+        <div class="close show-mobile" style="display:none;">
+            <h1 class="cerrar">x</h1>
+        </div>
+
+        <div class="logo">
+            <h1>logobakery</h1>
+        </div>
+
+        <div class="menu-window">
+            <div class="nav-links">
+                <div class="h1"><h1>service</h1></div>
+                <div class="h1"><h1>projects</h1></div>
+                <div class="h1"><h1>about</h1></div>
+                <div class="h1 show-mobile"><h1>contact</h1></div>
+            </div>
+            <div class="contact show-desktop">
+                <h1>contact</h1>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const popUp = document.querySelector('.pop-up');
+        const closeBtn = document.querySelector('.close');
+        const menu = document.querySelector('.menu-window');
+
+        popUp.addEventListener('click', function () {
+            menu.classList.add('visible-over');
+            popUp.style.display = 'none';
+            closeBtn.style.display = 'block';
+        });
+
+        closeBtn.addEventListener('click', function () {
+            menu.classList.remove('visible-over');
+            popUp.style.display = 'block';
+            closeBtn.style.display = 'none';
+        });
+    </script>
+</body>
+</html>

@@ -31,6 +31,14 @@
 
     }
 
+    .menu-window{
+        display: flex;
+        align-items: center;
+        /*gap: 20px;*/
+        font-size: small;
+
+    }
+
     .contact {
         display: flex;
         background-color: blue;
@@ -96,8 +104,10 @@
     .h1 {
         padding-left: 10px;
         padding-right: 10px;
+    }
 
-
+    .visible-over {
+        display: block;
     }
 
 
@@ -140,9 +150,34 @@
         .show-mobile {
             display: block;
             text-align: left;
-           /* background-color: blue;*/
+            /* background-color: blue;*/
         }
 
+        .pop-up {
+            z-index: 30;
+        }
+
+        .menu-window {
+            display: none;
+        }
+
+        .visible-over {
+            display: block;
+        }
+
+
+    }
+
+        @media (max-width:400px) {
+        .nav-links {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .logo {
+            margin-left: 10px;
+        }
 
     }
 
@@ -186,6 +221,8 @@
             text-align: left;
             /*background-color: blue;*/
         }
+
+
 
 
     }
@@ -234,18 +271,7 @@
 
     }
 
-    @media (max-width:400px) {
-        .nav-links {
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-        }
 
-        .logo {
-            margin-left: 10px;
-        }
-
-    }
 
 
 
@@ -299,25 +325,34 @@
 
 <body>
     <div class="barra1">
+        <div class="pop-up show-mobile">
+            <h1 class="abrir">...</h1>
+        </div>
+        <div class="close show-mobile">
+            <h1 class="cerrar">x</h1>
+        </div>
+
         <div class="logo">
             <h1>logobakery</h1>
         </div>
-        <div class="nav-links ">
-            <div class="h1">
-                <h1>service</h1>
+        <div class="menu-window">
+            <div class="nav-links ">
+                <div class="h1">
+                    <h1>service</h1>
+                </div>
+                <div class="h1">
+                    <h1>projects</h1>
+                </div>
+                <div class="h1">
+                    <h1>about</h1>
+                </div>
+                <div class=" h1 show-mobile">
+                    <h1>contact </h1>
+                </div>
             </div>
-            <div class="h1">
-                <h1>projects</h1>
+            <div class="contact show-desktop">
+                <h1>contact</h1>
             </div>
-            <div class="h1">
-                <h1>about</h1>
-            </div>
-            <div class=" h1 show-mobile">
-                <h1>contact </h1>
-            </div>
-        </div>
-        <div class="contact show-desktop">
-            <h1>contact</h1>
         </div>
 
     </div>
@@ -366,5 +401,18 @@
         </div>
     </div>
 </body>
+
+<script>
+    document.querySelector('.pop-up').addEventListener('click', function () {
+
+        document.querySelector('.menu-window').classList.add('visible-over');
+        console.log("hola")
+    });
+
+        document.querySelector('.close').addEventListener('click', function () 
+    {
+            document.querySelector('.menu-window').classList.remove('visible-over');
+    });
+</script>
 
 </html>
